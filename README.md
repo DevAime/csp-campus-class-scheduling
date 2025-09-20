@@ -47,9 +47,11 @@ Output file: labo_schedule3.xlsx
 Contains the generated weekly lab schedule
 
 ## Example Screenshots
-Input Excel File
+### Input Excel File
 <img width="500px" alt="image" src="https://github.com/user-attachments/assets/13c73255-a70a-4c54-9659-ca21ed30d890" />
-Output Excel File
+
+#### Output Excel File
+
 <img width="500px" alt="image" src="https://github.com/user-attachments/assets/1595527f-c8be-4907-a502-bddc0d150c43" />
 
 ## Variables, Domains, and Constraints
@@ -100,4 +102,4 @@ Generate and download schedule interactively
 Run the app:
 
 pip install streamlit
-streamlit run main2.py
+streamlit run GUI.py
