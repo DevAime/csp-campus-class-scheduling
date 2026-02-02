@@ -4,7 +4,7 @@ A Constraint Satisfaction Problem (CSP) based laboratory scheduling system for U
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://csp-campus-class-scheduling-wlbrihwj9bevrnxrp5jemp.streamlit.app/)
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Concept of Constraint Satisfaction Problems](#concept-of-constraint-satisfaction-problems)
@@ -16,15 +16,14 @@ A Constraint Satisfaction Problem (CSP) based laboratory scheduling system for U
 - [Team Contributions](#team-contributions)
 - [Project Structure](#project-structure)
 - [Conclusion](#conclusion)
-- [License](#license)
 
-## 🎯 Overview
+##  Overview
 
 This project automates the creation of weekly laboratory schedules for 5 laboratories in the LKB Building at UISU-Africa. The system handles up to 200 classes per semester taught by 60 faculty members using a Constraint Satisfaction Programming (CSP) approach implemented with Google OR-Tools.
 
 **Live Demo:** [Streamlit Web App](https://csp-campus-class-scheduling-wlbrihwj9bevrnxrp5jemp.streamlit.app/)
 
-## 🧠 Concept of Constraint Satisfaction Problems (CSP)
+##  Concept of Constraint Satisfaction Problems (CSP)
 
 CSPs (Constraint Satisfaction Problems) are search problems where the solution must satisfy a set of constraints. The problem is framed as a collection of variables, each with a set of possible values (domains), and a collection of constraints that restrict the values the variables can take simultaneously.
 
@@ -42,7 +41,7 @@ This approach is powerful in situations where we must make optimal or feasible d
 
 A CSP solver uses these constraints, along with heuristics, to reduce the search space and find a feasible solution efficiently.
 
-## 🏫 Problem Statement: Laboratory Scheduling at UISU-Africa
+##  Problem Statement: Laboratory Scheduling at UISU-Africa
 
 We aim to design a weekly laboratory schedule for **5 laboratories** in the LKB Building at **UISU-Africa**. Our university offers **200 classes per semester**, taught by **60 faculty members**.
 
@@ -90,7 +89,7 @@ The program returns an output Excel file named `lab_schedule.xlsx` with the comp
 
 > **Note:** While the university offers 200 classes, we reduced the number to **100** in our experiment due to performance limitations on our local machines.
 
-## ✨ Features
+##  Features
 
 - **Automated Scheduling**: Generates optimal lab schedules based on constraints
 - **Constraint Handling**:
@@ -102,7 +101,7 @@ The program returns an output Excel file named `lab_schedule.xlsx` with the comp
 - **Web Interface**: User-friendly Streamlit GUI for non-technical users
 - **Scalable Solution**: Handles up to 200 classes across 5 laboratories
 
-## 🚀 Installation
+##  Installation
 
 ### Prerequisites
 
@@ -122,7 +121,7 @@ cd csp-campus-class-scheduling
 pip install -r requirements.txt
 ```
 
-## 📖 Usage
+##  Usage
 
 ### Command Line Interface
 
@@ -151,7 +150,7 @@ This will open a web browser where you can:
 
 The web app eliminates the need to interact directly with the code, making it accessible to administrators and staff without programming knowledge.
 
-## 🔧 Implementation Details
+##  Implementation Details
 
 ### Implementation Overview
 
@@ -168,7 +167,6 @@ The code follows these major steps:
 
 ### Step 1: Defining Variables and Domains
 
-**Assigned to: Aime**
 
 We create three variables for each class:
 - **lab**: An integer between 0 and 4, representing the 5 labs
@@ -206,7 +204,7 @@ The variables are stored in a dictionary for easy access per class.
 
 ### Step 2: Defining Constraints
 
-**Assigned to: Zakariya and Rachael**
+
 
 #### A. Avoiding Lab-Time-Day Overlaps
 No two classes should be in the same lab at the same time on the same day. This is ensured by:
@@ -254,7 +252,6 @@ All these constraints ensure the solution is practical, realistic, and follows i
 
 ### Step 3: Solving the Model and Exporting the Output
 
-**Assigned to: Sean and Crispin**
 
 We solve the problem using:
 
@@ -294,13 +291,13 @@ This file contains:
 - Type of Class (Concentration or Regular)
 - Whether it's a Double Class
 
-## 👥 Team Contributions
+##  Team Contributions
 
 - **Aime**: Defining Variables and Domains
 - **Zakariya & Rachael**: Defining Constraints
 - **Sean & Crispin**: Solving the Model and Exporting Output
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 csp-campus-class-scheduling/
@@ -310,33 +307,13 @@ csp-campus-class-scheduling/
 ├── classes_input2.xlsx         # Sample input file with class data
 ├── lab_schedule.xlsx           # Sample output file with generated schedule
 ├── requirements.txt            # Python dependencies
-├── runtime.txt                 # Python version for deployment
-├── LICENSE                     # MIT License
+├── runtime.txt                 # Python version for deployment                 
 └── README.md                   # This file
 ```
 
-## 🎓 Conclusion
+##  Conclusion
 
 This project demonstrates the power of CSPs in solving real-world scheduling problems. Using OR-Tools, we modeled variables, defined their domains, and encoded institutional constraints to automatically generate a lab schedule that avoids conflicts and follows policy rules.
 
 Despite initial performance limitations with other libraries and with large input sizes, our final approach is scalable and can be further optimized or extended to include soft constraints (like preferred times or faculty availability) in future versions.
 
-This lab scheduling system can greatly ease administrative workload and improve scheduling efficiency at UISU-Africa.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Google OR-Tools team for the powerful constraint programming library
-- UISU-Africa for the problem domain and support
-- Streamlit for the intuitive web framework
-
-## 📞 Support
-
-For questions or issues, please open an issue on the GitHub repository or contact the development team.
-
----
-
-**Made with ❤️ by the UISU-Africa CSP Team**
